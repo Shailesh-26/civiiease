@@ -6,6 +6,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import SearchBar from '@/components/SearchBar';
 import ServiceCard from '@/components/ServiceCard';
+import QuickActions from '@/components/QuickActions';
 import Footer from '@/components/Footer';
 import ChatBot from '@/components/ChatBot';
 import AuthDialog from '@/components/AuthDialog';
@@ -40,6 +41,13 @@ const Index = () => {
             <section id="services" className="py-20 px-4">
               <div className="container mx-auto">
                 <SearchBar onSearch={setFilteredServices} />
+                
+                <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                  CiviEase
+                </h2>
+                
+                <QuickActions />
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {filteredServices.map((service) => (
                     <ServiceCard
